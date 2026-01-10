@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box ;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+        font-family: 'Arial', sans-serif;
+    }
+    main{
+        background-color: #000;
+        color: white;
+        overflow: auto;
+        height: 100%;
+    }
+            main .page {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  color: var(--primaryLight);
+  padding-top: 15vh;
+  font-size: 3rem;
+}
+main .page .accordian {
+  width: 100%;
+  padding-left: 0.5em;
+  border-top: 1px solid rgba(248, 248, 248, 0.1960784314);
+  font-size: 1em;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+main .page .accordian .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9em 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+main .page .accordian .top button {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--primaryLight);
+  font-size: 1rem;
+  cursor: pointer;
+}
+main .page .accordian .panel {
+  padding-left: 0.75em;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 1.3s cubic-bezier(0.23, 1, 0.32, 1);
+  padding-bottom: 0;
+}
+main .page .accordian .panel div {
+  overflow: hidden;
+}
+main .page .accordian.active > .panel {
+  grid-template-rows: 1fr;
+  flex-shrink: 1;
+  padding-bottom: 0.6em;
+}
+</style>
+<body>
+    <main>
+        <div class="page">
+        <div class="accordian">
+            <div class="top">
+                <h3>Hello</h3>
+                <button> <span>Expand</span>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+            </div>
+            <div class="panel">
+                <div class="panelContent">
+                                    <div class="topic">Overview of Generative AI</div>
+                                    <div class="topic">Building Applications with Generative AI</div>
+                                    <div class="topic">Agentic-ai application</div>
+                                    <div class="topic">Working with multi agent system</div>
+                                    <div class="topic">MCP Servers</div>
+                                    <div class="topic">Building Applications with Generative AI</div>
+                                    <div class="topic">LangChain for Generative AI</div>
+                                    <div class="topic">Real-world projects (Resume reviewer, Virtual Interviewer)</div>
+                                </div>
+            </div>
+
+        </div>
+        <div class="accordian">
+            <div class="top">
+                <h3>Hello</h3>
+                <button> <span>Expand</span>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+            </div>
+            <div class="panel">
+                <div class="panelContent">
+                                    <div class="topic">Overview of Generative AI</div>
+                                    <div class="topic">Building Applications with Generative AI</div>
+                                    <div class="topic">Agentic-ai application</div>
+                                    <div class="topic">Working with multi agent system</div>
+                                    <div class="topic">MCP Servers</div>
+                                    <div class="topic">Building Applications with Generative AI</div>
+                                    <div class="topic">LangChain for Generative AI</div>
+                                    <div class="topic">Real-world projects (Resume reviewer, Virtual Interviewer)</div>
+                                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+    <script>
+         document.querySelectorAll('.accordian .top').forEach(accordian => {
+            accordian.addEventListener('click', (event) => {
+                event.target.closest('.accordian').classList.toggle('active')
+            })
+        })
+    </script>
+</body>
+</html>

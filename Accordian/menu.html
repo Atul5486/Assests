@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            background-color: #2222;
+        }
+        #main .page5 {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  color: var(--primaryLight);
+  padding-top: 15vh;
+  font-size: 3rem;
+}
+#main .page5 .accordian {
+  width: 100%;
+  padding-left: 0.5em;
+  border-top: 1px solid rgba(248, 248, 248, 0.1960784314);
+  font-size: 1em;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+#main .page5 .accordian .floatingImage {
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  top: 0;
+  left: 0;
+  width: 10rem;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 0.75rem;
+}
+#main .page5 .accordian .accordian {
+  font-size: 0.85em;
+  padding-left: 0;
+  border: none;
+}
+#main .page5 .accordian .accordian .top {
+  padding-top: 0;
+}
+#main .page5 .accordian .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9em 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+#main .page5 .accordian .top h1 {
+  font-weight: 600;
+  font-size: 0.8em;
+}
+#main .page5 .accordian .top button {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--primaryLight);
+  font-size: 1rem;
+  cursor: pointer;
+}
+#main .page5 .accordian .top button .icon {
+  padding: 0.15rem;
+  border-radius: 50%;
+  color: var(--primaryLight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.25em;
+  transition: 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+#main .page5 .accordian .panel {
+  padding-left: 0.75em;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 1.3s cubic-bezier(0.23, 1, 0.32, 1);
+  padding-bottom: 0;
+}
+#main .page5 .accordian .panel div {
+  overflow: hidden;
+}
+#main .page5 .accordian .panel ol,
+#main .page5 .accordian .panel ul {
+  list-style-type: none;
+}
+#main .page5 .accordian .panel li {
+  font-size: 0.7em;
+  margin-left: 0.4em;
+  font-weight: 300;
+}
+#main .page5 .accordian .panel p,
+#main .page5 .accordian .panel .topic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6em;
+  line-height: 1.7em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+#main .page5 .accordian .panel p .time,
+#main .page5 .accordian .panel .topic .time {
+  font-size: 0.7em;
+}
+#main .page5 .accordian.active > .top button .icon {
+  transform: translate(0, 0) rotate(180deg);
+}
+#main .page5 .accordian.active > .panel {
+  grid-template-rows: 1fr;
+  flex-shrink: 1;
+  padding-bottom: 0.6em;
+}
+#main .page5 .accordian:hover:has(.accordian:hover) > .floatingImage {
+  transform: translate(-50%, -50%) scale(0);
+}
+#main .page5 .accordian:hover > .floatingImage {
+  transform: translate(-50%, -50%) scale(1);
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+         <section class="page page5 syllabus">
+            <div class="accordian active">
+                <div class="top">
+                    <h1>AI and Generative AI</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Generative AI & Applications</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Overview of Generative AI</div>
+                                    <div class="topic">Building Applications with Generative AI</div>
+                                    <div class="topic">Agentic-ai application</div>
+                                    <div class="topic">Working with multi agent system</div>
+                                    <div class="topic">MCP Servers</div>
+                                    <div class="topic">Building Applications with Generative AI</div>
+                                    <div class="topic">LangChain for Generative AI</div>
+                                    <div class="topic">Real-world projects (Resume reviewer, Virtual Interviewer)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian active">
+                <div class="top">
+                    <h1>Web Development</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Frontend Development</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>HTML</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">How the Internet Works (Web 1.0 - Web 3.0)</div>
+                                                <div class="topic">Client-Server Architecture</div>
+                                                <div class="topic">Internet Protocols (TCP, UDP)</div>
+                                                <div class="topic">HTTP & HTTPS</div>
+                                                <div class="topic">HTML Structure and Tags</div>
+                                                <div class="topic">Text and Media Elements</div>
+                                                <div class="topic">Lists (Ordered & Unordered)</div>
+                                                <div class="topic">Semantic HTML5 Tags</div>
+                                                <div class="topic">Forms and Inputs</div>
+                                                <div class="topic">Tables</div>
+                                                <div class="topic">Symbols and Special Characters</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>CSS</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">CSS Syntax and Selectors</div>
+                                                <div class="topic">Styling Text and Colors</div>
+                                                <div class="topic">CSS Box Model (Margin, Padding, Border)</div>
+                                                <div class="topic">Backgrounds and Shadows</div>
+                                                <div class="topic">Display and Positioning</div>
+                                                <div class="topic">Flexbox and Grid</div>
+                                                <div class="topic">Pseudo-classes and Pseudo-elements</div>
+                                                <div class="topic">Transitions and Transforms</div>
+                                                <div class="topic">CSS Animations</div>
+                                                <div class="topic">CSS Frameworks (Tailwind CSS, Bootstrap)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Responsive Web Design</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Mobile-First vs. Desktop-First</div>
+                                                <div class="topic">Viewport Meta Tag</div>
+                                                <div class="topic">Media Queries</div>
+                                                <div class="topic">Responsive Images and Typography</div>
+                                                <div class="topic">CSS Functions (clamp, min, max)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>SASS/SCSS</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Introduction to SASS/SCSS</div>
+                                                <div class="topic">Variables, Nesting, and Partials</div>
+                                                <div class="topic">Mixins, Inheritance, and Functions</div>
+                                                <div class="topic">Operators and Control Directives</div>
+                                                <div class="topic">Color Functions</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>JavaScript</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">JavaScript Basics (Variables, Data Types, Operators)
+                                                </div>
+                                                <div class="topic">Control Flow (Conditionals, Loops)</div>
+                                                <div class="topic">Functions (Declarations, Expressions, Arrow
+                                                    Functions)</div>
+                                                <div class="topic">Arrays and Objects</div>
+                                                <div class="topic">DOM Manipulation</div>
+                                                <div class="topic">Event Handling</div>
+                                                <div class="topic">Browser APIs (Storage, Fetch, Geolocation)</div>
+                                                <div class="topic">Object-Oriented Programming (OOP)</div>
+                                                <div class="topic">Asynchronous JavaScript (Promises, Async/Await)</div>
+                                                <div class="topic">Error Handling</div>
+                                                <div class="topic">Advanced Concepts (Throttling, Debouncing, JSON)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>React.js</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Introduction to React and Components</div>
+                                                <div class="topic">JSX and Virtual DOM</div>
+                                                <div class="topic">Component Lifecycle</div>
+                                                <div class="topic">Props and State</div>
+                                                <div class="topic">Event Handling</div>
+                                                <div class="topic">Styling in React</div>
+                                                <div class="topic">React Hooks</div>
+                                                <div class="topic">React Router</div>
+                                                <div class="topic">State Management with Redux</div>
+                                                <div class="topic">Form Handling</div>
+                                                <div class="topic">Performance Optimization</div>
+                                                <div class="topic">Deploying React Projects</div>
+                                                <div class="topic">SEO Basics</div>
+                                                <div class="topic">Framer Motion & GSAP</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Backend Development</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Node.js</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Introduction and Setup</div>
+                                                <div class="topic">Modules and NPM</div>
+                                                <div class="topic">Core Modules (os, fs, path)</div>
+                                                <div class="topic">Creating a Server with HTTP</div>
+                                                <div class="topic">Express.js Framework</div>
+                                                <div class="topic">Middleware</div>
+                                                <div class="topic">File Handling (Multer)</div>
+                                                <div class="topic">Template Engines (EJS)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Databases</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Relational vs. Non-Relational Databases</div>
+                                                <div class="topic">MongoDB (Setup, CRUD Operations)</div>
+                                                <div class="topic">Mongoose ODM</div>
+                                                <div class="topic">Database Relationships</div>
+                                                <div class="topic">Database Optimization (Indexing, Aggregation)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>API Development (REST)</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">REST API Principles</div>
+                                                <div class="topic">Designing RESTful Endpoints</div>
+                                                <div class="topic">API Testing (Postman)</div>
+                                                <div class="topic">Status Codes</div>
+                                                <div class="topic">Input Validation</div>
+                                                <div class="topic">Security (Rate Limiting, XSS, CSRF)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Authentication & Authorization</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Authentication Methods (JWT, Passport.js)</div>
+                                                <div class="topic">Password Security (bcrypt)</div>
+                                                <div class="topic">Role-Based Access Control (RBAC)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Real-time Communication</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">WebSockets and Socket.io</div>
+                                                <div class="topic">Building Real-time Applications</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Caching</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Caching Strategies</div>
+                                                <div class="topic">Redis Integration</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Error Handling & Logging</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Error Handling Middleware</div>
+                                                <div class="topic">Logging Libraries</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Testing and Deployment</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Testing Frameworks (Jest)</div>
+                                                <div class="topic">Deployment Strategies</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>DevOps and Web3</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>DevOps Fundamentals</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Introduction to DevOps</div>
+                                                <div class="topic">CI/CD Pipelines</div>
+                                                <div class="topic">Docker and Containerization</div>
+                                                <div class="topic">Kubernetes</div>
+                                                <div class="topic">Infrastructure as Code (Terraform)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Progressive Web Apps (PWAs)</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Introduction to PWAs</div>
+                                                <div class="topic">Service Workers</div>
+                                                <div class="topic">Lazy Loading and Code Splitting</div>
+                                                <div class="topic">PWA Testing</div>
+                                                <div class="topic">Performance Optimization</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordian">
+                                        <div class="top">
+                                            <h1>Web3 Basics</h1>
+                                            <button> <span>Expand</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panelContent">
+                                                <div class="topic">Introduction to Web3</div>
+                                                <div class="topic">Blockchain Fundamentals</div>
+                                                <div class="topic">Smart Contracts</div>
+                                                <div class="topic">Decentralized Applications (DApps)</div>
+                                                <div class="topic">Cryptocurrencies</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Version Control</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Git and GitHub Fundamentals</div>
+                                    <div class="topic">Branching and Merging</div>
+                                    <div class="topic">Collaboration Workflow</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian active">
+                <div class="top">
+                    <h1>DSA</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Fundamentals</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Control Flow Statements (Conditionals, Loops)</div>
+                                    <div class="topic">Pattern Programming</div>
+                                    <div class="topic">Time and Space Complexity</div>
+                                    <div class="topic">Recursion</div>
+                                    <div class="topic">Math Problems and Algorithms</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Data Structures</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Arrays (1-D, Multi-D)</div>
+                                    <div class="topic">Strings</div>
+                                    <div class="topic">Linked Lists</div>
+                                    <div class="topic">Stacks and Queues</div>
+                                    <div class="topic">Trees (Binary Trees, BST)</div>
+                                    <div class="topic">Hashing (Sets and Maps)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Algorithms</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Sorting Algorithms (Bubble, Selection, Insertion, Merge, Quick)
+                                    </div>
+                                    <div class="topic">Searching Algorithms (Binary Search)</div>
+                                    <div class="topic"></div>
+                                    <div class="topic">Sliding Window / Two-Pointer Technique</div>
+                                    <div class="topic">Backtracking</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Object-Oriented Programming (OOP)</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Classes and Objects</div>
+                                    <div class="topic">Constructors</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian active">
+                <div class="top">
+                    <h1>Aptitude & Reasoning</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Quantitative Aptitude</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Percentage</div>
+                                    <div class="topic">Profit and Loss</div>
+                                    <div class="topic">Simple Interest</div>
+                                    <div class="topic">Compound Interest</div>
+                                    <div class="topic">Ratio and Proportion</div>
+                                    <div class="topic">Number System</div>
+                                    <div class="topic">HCF and LCM</div>
+                                    <div class="topic">Average</div>
+                                    <div class="topic">Work and Time</div>
+                                    <div class="topic">Pipes and Cisterns</div>
+                                    <div class="topic">Speed, Distance, and Time</div>
+                                    <div class="topic">Problems on Trains</div>
+                                    <div class="topic">Boats and Streams</div>
+                                    <div class="topic">Permutations and Combinations</div>
+                                    <div class="topic">Probability</div>
+                                    <div class="topic">Arithmetic Progression (AP)</div>
+                                    <div class="topic">Geometric Progression (GP)</div>
+                                    <div class="topic">Calendar</div>
+                                    <div class="topic">Clocks</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Logical Reasoning</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Direction Sense</div>
+                                    <div class="topic">Blood Relation</div>
+                                    <div class="topic">Syllogism</div>
+                                    <div class="topic">Arrangements</div>
+                                    <div class="topic">Series</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordian">
+                            <div class="top">
+                                <h1>Verbal Reasoning</h1>
+                                <button> <span>Expand</span>
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="panel">
+                                <div class="panelContent">
+                                    <div class="topic">Sentence Ordering</div>
+                                    <div class="topic">Error Identification</div>
+                                    <div class="topic">Sentence Improvement</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+         document.querySelectorAll('.accordian .top').forEach(accordian => {
+            accordian.addEventListener('click', (event) => {
+                event.target.closest('.accordian').classList.toggle('active')
+            })
+        })
+    </script>
+</body>
+</html>
