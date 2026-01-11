@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Class in javascript</title>
+</head>
+<body>
+    <div class="p-20 flex items-center justify-center w-full flex-col gap-10">
+        <form class="flex flex-col gap-5 w-2/3 items-center justify-center" >
+            <input id="name" class="max-md-w-2/3 w-1/2 px-2 py-1 border-2 border-zinc-500 outline-none rounded-md bg-transparent " type="text" placeholder="Enter username" name="username">
+            <input id="bio" class="max-md-w-2/3 w-1/2 px-2 py-1 border-2 border-zinc-500 outline-none rounded-md bg-transparent " type="text" placeholder="Enter bio" name="bio">
+            <input id="image" class="max-md-w-2/3 w-1/2 px-2 py-1 border-2 border-zinc-500 outline-none rounded-md bg-transparent " type="text" placeholder="Enter image url" name="image">
+            <input class="max-md-w-1/2 w-1/2 bg-green-500 p-2 rounded-md" type="submit" value="Submit">
+        </form>
+        <div class="cards grid grid-cols-3 gap-4 w-full ">
+            <div class="card bg-zinc-800 p-5 rounded-md w-60 flex flex-col items-center">
+                <div class="img w-20 h-20">
+                <img class="object-cover rounded-[50%] w-full h-full" src="https://images.unsplash.com/photo-1755520795091-adf1f3f307e0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt="No image">
+                </div>
+                <h1 class="text-2xl">username</h1>
+                <p class="text-sm">lorem20</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
