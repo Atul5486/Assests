@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        #box{
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            background-color: cornflowerblue;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <h1>Hello I Am A Heading</h1>
+    <h1>Hello I Am Another Heading</h1>
+    <h1>Hello I Am Also Heading</h1>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        // For Animation
+gsap.to("#box",{
+    x:1066,
+    rotate:360,
+    duration:2,
+    borderRadius:"50%",
+    delay:1,
+    repeat:-1,
+    yoyo:true,
+    // backgroundColor:"crimson"
+})
+// For text Animation
+gsap.from("h1",{
+
+    opacity:0,
+    duration:1,
+    y:30,
+    delay:1,
+    stagger:1,
+    repeat:-1
+})
+
+// Timeline
+// var t=gsap.timeline()
+// t.to("#box",{
+//     x:1066,
+//     duration:2,
+//     delay:1,
+   
+// })
+    </script>
+</body>
+</html>

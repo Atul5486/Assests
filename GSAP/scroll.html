@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroller</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        box-sizing:border-box;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    #box{
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+    }
+    #page1{
+        background-color:salmon;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #page2{
+        background-color:lightseagreen;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #page3{
+        background-color:crimson;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #page3 h1{
+        font-size: 60px;
+        position: relative;
+        padding: 5px;
+        background-color: yellow;
+    }
+    h2{
+        font-size: 60px;
+        position: relative;
+        padding: 5px;
+        background-color: rgb(247, 247, 247);
+    }
+#page4{
+    background-color:black;
+    height: 100%;
+    width: 100%;
+}
+#page4 h1{
+    color: white;
+    font-size: 41vw;
+    padding: 3vh;
+    font-weight: 500;
+}
+</style>
+<body>
+    <div id="page1">
+        <div id="box"></div>
+    </div>
+    <div id="page2">
+        <div id="box"></div>
+    </div>
+    <div id="page3">
+        <h1>Hello Dosto</h1>
+        <h2>Kaise Ho</h2>
+        <!-- <div id="box"></div> -->
+    </div>
+    <div id="page4">
+        <h1>Expreinces</h1>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>
