@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#container{
+    position: relative;
+    height:400px;
+    width: 350px;
+    border-radius: 10px;
+}
+#container img{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#container #love{
+    font-size: 75px;
+    color: #f04098;
+    position: absolute; 
+    top:50%;
+    left: 50%;  
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition: transform ease 0.4s  ;
+}
+#container #bottom i{
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+#bottom{
+    position: relative;
+}
+#bottom #love2{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+#Para{
+    color: #fff;
+    width: 150px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}

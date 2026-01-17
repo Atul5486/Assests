@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #000;
+    }
+    div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  padding: 20px 10px 15px 10px;
+  margin: 0 15px;
+}
+
+.navbar .navbar-nav .nav-link .rolling-text {
+  height: 30px;
+  line-height: 30px;
+}
+.rolling-text {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 50px;
+  height: 50px;
+}
+.rolling-text:hover .letter,
+.rolling-text.play .letter {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+
+.rolling-text .letter {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1), -webkit-transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.letter:nth-child(1) {
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.letter:nth-child(2) {
+  -webkit-transition-delay: 0.015s;
+  -o-transition-delay: 0.015s;
+  transition-delay: 0.015s;
+}
+
+.letter:nth-child(3) {
+  -webkit-transition-delay: 0.03s;
+  -o-transition-delay: 0.03s;
+  transition-delay: 0.03s;
+}
+
+.letter:nth-child(4) {
+  -webkit-transition-delay: 0.045s;
+  -o-transition-delay: 0.045s;
+  transition-delay: 0.045s;
+}
+
+.letter:nth-child(5) {
+  -webkit-transition-delay: 0.06s;
+  -o-transition-delay: 0.06s;
+  transition-delay: 0.06s;
+}
+
+.letter:nth-child(6) {
+  -webkit-transition-delay: 0.075s;
+  -o-transition-delay: 0.075s;
+  transition-delay: 0.075s;
+}
+
+.letter:nth-child(7) {
+  -webkit-transition-delay: 0.09s;
+  -o-transition-delay: 0.09s;
+  transition-delay: 0.09s;
+}
+
+.letter:nth-child(8) {
+  -webkit-transition-delay: 0.105s;
+  -o-transition-delay: 0.105s;
+  transition-delay: 0.105s;
+}
+
+.letter:nth-child(9) {
+  -webkit-transition-delay: 0.12s;
+  -o-transition-delay: 0.12s;
+  transition-delay: 0.12s;
+}
+
+.letter:nth-child(10) {
+  -webkit-transition-delay: 0.135s;
+  -o-transition-delay: 0.135s;
+  transition-delay: 0.135s;
+}
+
+.letter:nth-child(11) {
+  -webkit-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.letter:nth-child(12) {
+  -webkit-transition-delay: 0.165s;
+  -o-transition-delay: 0.165s;
+  transition-delay: 0.165s;
+}
+
+.letter:nth-child(13) {
+  -webkit-transition-delay: 0.18s;
+  -o-transition-delay: 0.18s;
+  transition-delay: 0.18s;
+}
+
+.letter:nth-child(14) {
+  -webkit-transition-delay: 0.195s;
+  -o-transition-delay: 0.195s;
+  transition-delay: 0.195s;
+}
+
+.letter:nth-child(15) {
+  -webkit-transition-delay: 0.21s;
+  -o-transition-delay: 0.21s;
+  transition-delay: 0.21s;
+}
+
+.letter:nth-child(16) {
+  -webkit-transition-delay: 0.225s;
+  -o-transition-delay: 0.225s;
+  transition-delay: 0.225s;
+}
+
+.letter:nth-child(17) {
+  -webkit-transition-delay: 0.24s;
+  -o-transition-delay: 0.24s;
+  transition-delay: 0.24s;
+}
+
+.letter:nth-child(18) {
+  -webkit-transition-delay: 0.255s;
+  -o-transition-delay: 0.255s;
+  transition-delay: 0.255s;
+}
+
+.letter:nth-child(19) {
+  -webkit-transition-delay: 0.27s;
+  -o-transition-delay: 0.27s;
+  transition-delay: 0.27s;
+}
+
+.letter:nth-child(20) {
+  -webkit-transition-delay: 0.285s;
+  -o-transition-delay: 0.285s;
+  transition-delay: 0.285s;
+}
+
+.letter:nth-child(21) {
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+</style>
+<body>
+    <div>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Pages</span></a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Blogs</span></a>
+        <a class="nav-link" href="page-contact.html"><span class="rolling-text">Contact</span></a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Shop</span></a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Home</span></a>
+
+    </div>
+    <script>
+         let elements = document.querySelectorAll(".rolling-text");
+
+elements.forEach((element) => {
+    let innerText = element.innerText;
+    element.innerHTML = "";                                                                                                                                                                       
+
+    let textContainer = document.createElement("div");
+    textContainer.classList.add("block");
+
+    for (let letter of innerText) {
+        let span = document.createElement("span");
+        span.innerText = letter.trim() === "" ? "\xa0" : letter;
+        span.classList.add("letter");
+        textContainer.appendChild(span);
+    }
+
+    element.appendChild(textContainer);
+    element.appendChild(textContainer.cloneNode(true));
+});
+    </script>
+</body>
+</html>
