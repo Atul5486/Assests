@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Snap </title>
+    <style>
+      /* Reset & Page Layout */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #121214;
+        background-image:
+          repeating-linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.1) 0px,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px,
+            transparent 40px
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.1) 0px,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px,
+            transparent 40px
+          );
+      }
+
+      /* 1. Configure the parent container */
+      .scroll-container {
+        height: 60vh;
+        width: 30vw;
+        box-shadow: 0px 0px 30px #fefefe29;
+        border-radius: 1rem;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory; /* Locks strictly to vertical snap points */
+      }
+
+      .scroll-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* 2. Configure the child elements */
+      .scroll-area {
+        height: 60vh;
+        scroll-snap-align: start; /* Snaps to the top of each section */
+
+        /* Optional aesthetics */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .scroll-area:nth-child(odd) {
+        background: #114fee;
+      }
+      .scroll-area:nth-child(even) {
+        background: #87ea87;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The scroll container (parent) -->
+    <div class="scroll-container">
+      <!-- The snap targets (children) -->
+      <section class="scroll-area"><h1>Section 1</h1></section>
+      <section class="scroll-area"><h1>Section 2</h1></section>
+      <section class="scroll-area"><h1>Section 3</h1></section>
+      <section class="scroll-area"><h1>Section 4</h1></section>
+      <section class="scroll-area"><h1>Section 5</h1></section>
+    </div>
+  </body>
+</html>
